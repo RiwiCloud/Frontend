@@ -25,14 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error("Error:", errorData.message);
-        alert("Error: " + errorData.message);
+        console.error("Error:", errorData);
+        alert("Error: " + (errorData.message || "Unprocessable Entity"));
         return;
       }
 
       const responseData = await response.json();
       console.log("Success:", responseData);
       alert("Registro exitoso!");
+
+      // Restablece el formulario
+      form.reset();
 
       // Puedes redirigir al usuario a otra página después del registro exitoso
       // window.location.href = 'https://tudominio.com/login';
