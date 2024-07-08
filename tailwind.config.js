@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const { addDynamicIconSelectors } = require('@iconify/tailwind')
+
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -22,5 +27,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-  ],
+    require('flowbite/plugin'),
+    addDynamicIconSelectors(),
+],
 }
