@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       form.reset();
 
       // Puedes redirigir al usuario a otra página después del registro exitoso
-      // window.location.href = 'https://tudominio.com/login';
+      window.location.href = 'Login.html';
     } catch (error) {
       console.error("Error:", error);
       alert("Error al registrar usuario.");
