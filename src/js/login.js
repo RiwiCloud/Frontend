@@ -27,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
           // Almacenar el token en el almacenamiento local o sesión
           localStorage.setItem('token', result.Token);
           // Redirigir a la página principal o mostrar un mensaje de éxito
-          window.location.href = 'homepage.html'; // Cambia a la URL de tu página principal
+          window.location.href = 'Index.html'; // Cambia a la URL de tu página principal
       } else {
           // Manejar errores de autenticación
           const error = await response.text();
