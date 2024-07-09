@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('logout-button').addEventListener('click', function() {
-        // Eliminar el token del almacenamiento local
-        localStorage.removeItem('token');
+    // Agrega el evento de clic a los botones de cierre de sesión
+    document.getElementById('logout-button').addEventListener('click', handleLogout);
+    document.getElementById('logout-button2').addEventListener('click', handleLogout);
 
-        // Redirigir a la página de inicio de sesión
-        window.location.href = 'Login.html'; // Cambia a la URL de tu página de inicio de sesión
-    });
+    // Función de cierre de sesión
+    function handleLogout() {
+        localStorage.removeItem('token'); // Elimina el token del almacenamiento local
+        window.location.href = 'Login.html'; // Redirige a la página de inicio de sesión
+    }
 });
+
